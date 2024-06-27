@@ -1,0 +1,63 @@
+/*==========================================
+    error
+===========================================*/
+.error-404 {
+    padding: 120px 0;
+    .error-content {
+        text-align: center;
+        .part-img {
+            margin-bottom: 55px;
+            img {
+
+            }
+        }
+        h3 {
+            font-size: 60px;
+            font-weight: 700;
+            color: $secondary-color;
+            margin-bottom: 48px;
+            span {
+                &.marked {
+                    color: $base-color;
+                }
+            }
+        }
+        a.back-button {
+            width: 220px;
+            height: 60px;
+            line-height: 60px;
+            background: $base-color;
+            border: 1px solid $base-color;
+            text-align: center;
+            color: $white;
+            font-family: $heading-font;
+            font-weight: 700;
+            font-size: 16px;
+            border-radius: 50px;
+            position: relative;
+            z-index: 2;
+            @include transition($transition);
+            display: inline-block;
+            overflow: hidden;
+            &:after {
+                position: absolute;
+                content: '';
+                left: -100%;
+                top: 1px;
+                width: 100%;
+                bottom: 1px;
+                border-radius: 50px 0 0 50px;
+                background: $secondary-color;
+                @include transition($transition);
+                z-index: -1;
+            }
+            &:hover {
+                color: $base-color;
+                &:after {
+                    left: 1px;
+                    border-radius: 50px;
+                }
+            }
+        }
+    }
+}

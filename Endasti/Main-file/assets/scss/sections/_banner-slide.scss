@@ -1,0 +1,246 @@
+/*==========================================
+    banner slide
+===========================================*/
+.animation-slide {
+    &.slide-style-2 {
+        .single-slide {
+            background: $white;
+            position: relative;
+            border-radius: 0 0 0 360px;
+            &:after {
+                background: url('../img/banner-1.jpg') center center no-repeat;
+                background-size: cover;
+                opacity: 1;
+                border-radius: 0 0 0 360px;
+            }
+            &:before {
+                position: absolute;
+                content: '';
+                left: 0;
+                top: 0;
+                width: 100%;
+                height: 100%;
+                background: black;
+                opacity: .76;
+                border-radius: 0 0 0 360px;
+            }
+            &.bg-2 {
+                &:after {
+                    background: url('../img/banner-3.jpg') center center no-repeat;
+                    background-size: cover;
+                }
+            }
+            &.bg-3 {
+                &:after {
+                    background: url('../img/banner-4.jpg') center center no-repeat;
+                    background-size: cover;
+                }
+            }
+            &.bg-1 {
+                &:after {
+                    background: url('../img/banner-2.jpg') center center no-repeat;
+                    background-size: cover;
+                }
+            }
+            .part-img {
+                position: absolute;
+                right: 0;
+                bottom: 0;
+                width: 950px;
+            }
+            .banner-content {
+                padding: 170px 0;
+                margin-top: 184px;
+                padding-bottom: 170px;
+                h2 {
+                    font-weight: 300;
+                    font-size: 55px;
+                    line-height: 70px;
+                    span {
+                        display: inline-block;
+                        &.first {
+                            color: $base-color;
+                            font-weight: 700;
+                        }
+                        &.second {
+                            font-weight: 700;
+                        }
+                    }
+                }
+            }
+        }
+    }
+    &.slide-style-3 {
+        .single-slide {
+            .banner-content {
+                padding-bottom: 150px;
+                margin-top: 40px;
+                padding-top: 110px;
+            }
+            &.bg-1 {
+                background: url('../img/banner-2.jpg') center center no-repeat;
+                background-size: cover;
+            }
+            &.bg-2 {
+                background: url('../img/banner-1.jpg') center center no-repeat;
+                background-size: cover;
+            }
+            &.bg-3 {
+                background: url('../img/banner-3.jpg') center center no-repeat;
+                background-size: cover;
+            }
+            &.bg-4 {
+                background: url('../img/banner-4.jpg') center center no-repeat;
+                background-size: cover;
+            }
+        }
+    }
+    .single-slide {
+        background: url('../img/banner-5.jpg') center center no-repeat;
+        background-size: cover;
+        position: relative;
+        z-index: 2;
+        &:after {
+            position: absolute;
+            content: '';
+            left: 0;
+            top: 0;
+            width: 100%;
+            height: 100%;
+            background: #000;
+            opacity: .50;
+            z-index: -1;
+        }
+        &:before {
+            position: absolute;
+            content: '';
+            left: 0;
+            top: 0;
+            width: 100%;
+            height: 100%;
+            background: url('../img/banner-shape.png') center center no-repeat;
+            background-size: cover;
+            z-index: 0;
+            opacity: .6;
+        }
+        &.bg-2 {
+            background: url('../img/banner-2.jpg') center center no-repeat;
+            background-size: cover;
+        }
+        &.bg-3 {
+            background: url('../img/banner-3.jpg') center center no-repeat;
+            background-size: cover;
+        }
+        &.bg-4 {
+            background: url('../img/banner-4.jpg') center center no-repeat;
+            background-size: cover;
+        }
+        .banner-content {
+            padding: 140px 0;
+            padding-bottom: calc(140px + 178px); 
+            margin-top: 144px;
+            h2 {
+                font-weight: 700;
+                font-size: 60px;
+                line-height: 74px;
+                color: $white;    
+                margin-bottom: 28px;
+                margin-top: -10px;
+            }
+            p {
+                color: $white;
+                font-family: $heading-font;
+                font-weight: 600;
+                font-size: 18px;
+                margin-bottom: 42px;
+            }
+            .slide-buttons {
+                .video-button {
+                    display: inline-block;
+                    width: 60px;
+                    height: 60px;
+                    border: 2px solid $base-color;
+                    line-height: 56px;
+                    text-align: center;
+                    color: $white;
+                    border-radius: 50%;
+                    margin-right: 26px;
+                }
+                .slide-btn {
+                    display: inline-block;
+                    height: 60px;
+                    border: 2px solid $base-color;
+                    background: $base-color;
+                    color: $white;
+                    padding: 0 30px;
+                    line-height: 56px;
+                    border-radius: 50px;
+                    @include transition($transition);
+                    &:hover {
+                        background: transparent;
+                    }
+                }
+            }
+        }
+    }
+    &:hover {
+        .owl-nav {
+            left: 50px;
+            right: 50px;
+            opacity: 1;
+        }
+    }
+    .owl-nav {
+        position: absolute;
+        top: 40%;
+        // transform: translateY(-50%);
+        display: flex;
+        justify-content: space-between;
+        left: 0;
+        right: 0;
+        opacity: 0;
+        @include transition($transition);
+        .owl-prev, .owl-next {
+            width: 70px;
+            height: 70px;
+            color: $white;
+            line-height: 70px;
+            border-radius: 50px;
+            text-align: center;
+            background: url('../img/banner-1.jpg') center center no-repeat;
+            background-size: cover;
+            position: relative;
+            z-index: 2;
+            @include transition($transition);
+            cursor: pointer;
+            &.disabled {
+                color: $base-color;
+                cursor: not-allowed;
+                &:hover {
+                    width: 70px;
+                }
+                &:after {
+                    opacity: 1;
+                    background: $white;
+                }
+            }
+            &:hover {
+                width: 120px;
+            }
+            &:after {
+                position: absolute;
+                content: '';
+                left: 0;
+                top: 0;
+                width: 100%;
+                height: 100%;
+                background-color: $base-color;
+                opacity: .5;
+                border-radius: 50px;
+                z-index: -1;
+                @include transition($transition);
+                z-index: -1;
+            }
+        }
+    }
+}  

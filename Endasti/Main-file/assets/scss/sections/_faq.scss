@@ -1,0 +1,110 @@
+/*==========================================
+    faq
+===========================================*/
+.faq {
+    padding: 120px 0;
+    background: #101010;
+    position: relative;
+    z-index: 2;
+    &:after {
+        position: absolute;
+        content: '';
+        left: 0;
+        top: 0;
+        width: 100%;
+        height: 100%;
+        background: url('../img/faq-bg.png') center center no-repeat;
+        background-size: cover;
+        z-index: -1;
+    }
+    .part-text {
+        h3 {
+            font-size: 20px;
+            font-weight: 700;
+            color: $white;
+            margin-bottom: 16px;
+        }
+        p {
+            line-height: 26px;
+            color: #f3f3f3;
+            margin-bottom: 38px;
+        }
+        ul {
+            li {
+                color: #f3f3f3;
+                font-family: $heading-font;    
+                margin-bottom: 18px;
+                line-height: 26px;
+                display: flex;
+                &:last-child {
+                    margin-bottom: 0;
+                }
+                span.icon {
+                    color: $third-color;
+                    margin-right: 10px;
+                }
+            }
+        }
+    }
+    .part-accordion {
+        .accordion {
+            .card {
+                margin-bottom: 20px;
+                border: 0;
+                &:last-child {
+                    margin-bottom: 0;
+                }
+                .card-header {
+                    padding: 0;
+                    border: none;
+                    border-radius: 0;
+                    h2 {
+                        button {
+                            padding: 0;
+                            height: 80px;
+                            width: 100%;
+                            text-align: left;
+                            border-radius: 0;
+                            padding: 0 40px;
+                            color: $secondary-color;
+                            font-family: $heading-font;
+                            font-weight: 700;
+                            text-decoration: none;
+                            border-left: 3px solid $base-color;
+                            position: relative;
+                            background: white;
+                            &:after {
+                                position: absolute;
+                                content: '\f078';
+                                font-family: "Font Awesome 5 Free";
+                                font-weight: 900;
+                                right: 30px;
+                                text-align: center;
+                                top: 50%;
+                                transform: translateY(-50%);
+                                width: 30px;
+                                height: 30px;
+                                line-height: 30px;
+                            }
+                            &.collapsed {
+                                background: #292929;
+                                color: $white;
+                                border-left: 3px solid transparent;
+                            }
+                        }
+                        button[aria-expanded="true"]:after {
+                            content: '\f057';
+                            color: #99a2ab;
+                        }
+                    }
+                }
+                .card-body {
+                    color: #444444;
+                    line-height: 26px;
+                    padding: 0 40px 30px;
+                    border-left: 3px solid $base-color;
+                }
+            }
+        }
+    }
+}

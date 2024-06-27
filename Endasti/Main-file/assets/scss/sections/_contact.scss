@@ -1,0 +1,117 @@
+/*==========================================
+    contact
+===========================================*/
+.contact {
+    .contact-form {
+        background: url('../img/contact.jpg') center center no-repeat;
+        background-size: cover;
+        position: relative;
+        z-index: 2;
+        padding: 120px 80px;
+        padding-right: 230px;
+        &:after {
+            position: absolute;
+            content: '';
+            left: 0;
+            top: 0;
+            width: 100%;
+            height: 100%;
+            background: black;
+            opacity: .84;
+            z-index: -1;
+        }
+        h2 {
+            font-size: 30px;
+            font-weight: 700;
+            color: $white;
+            margin-bottom: 15px;
+            span {
+                font-family: $playfair;
+                color: $base-color;
+                font-style: italic;
+            }
+        }
+        p {
+            color: $white;
+            margin-bottom: 24px;
+        }
+        form {
+            input {
+                width: 100%;
+                height: 55px;
+                border: none;
+                padding: 0 30px;
+                border-radius: 10px;
+                margin-bottom: 20px;
+            }
+            textarea {
+                width: 100%;
+                border: none;
+                height: 200px;
+                border-radius: 10px;
+                padding: 15px 30px;
+                display: grid;
+                margin-bottom: 30px;
+            }
+            button {
+                width: 100%;
+                outline: none;
+                background: $base-color;
+                border: none;
+                color: $white;
+                font-weight: 700;
+                font-size: 18px;
+                height: 55px;
+                border-radius: 10px;
+                border: 2px solid $base-color;
+                position: relative;
+                z-index: 2;
+                overflow: hidden;
+                cursor: pointer;
+                &:after {
+                    position: absolute;
+                    content: '';
+                    left: 0;
+                    top: 0;
+                    width: 0;
+                    height: 100%;
+                    background: black;
+                    z-index: -1;
+                    border-radius: 10px 0 0 10px;
+                    @include transition($transition);
+                }
+                &:before {
+                    position: absolute;
+                    content: '';
+                    right: 0;
+                    top: 0;
+                    width: 0;
+                    height: 100%;
+                    background: black;
+                    z-index: -1;
+                    border-radius: 0 10px 10px 0;
+                    @include transition($transition);
+                }
+                &:hover {
+                    &:after, &:before {
+                        width: 100%;
+                    }
+                }
+                span {
+                    position: absolute;
+                    right: 0;
+                    top: 0;
+                    width: 60px;
+                    background: #b63900;
+                    bottom: 0;
+                    display: flex;
+                    flex-direction: column;
+                    justify-content: center;
+                }
+            }
+        }
+    }
+    .map {
+        height: 100%;
+    }
+}

@@ -1,0 +1,29 @@
+/*==========================================
+    brand
+===========================================*/
+.brand {
+    padding: 70px 0 100px;
+    .brand-slider {
+        .single-brand {
+            height: 70px;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            padding: 0 40px;
+            img {
+                width: 100%;
+                height: auto;
+                @include transition(all .7s ease-out);
+            }
+            &:hover {
+                img {
+                    transform: rotateY(360deg);
+                }
+            }
+        }
+        .owl-nav {
+            display: none;
+        }
+    }
+}

@@ -1,0 +1,87 @@
+/*==========================================
+    process
+===========================================*/
+.process {
+    padding: 120px 0;
+    .container {
+        position: relative;
+        .step {
+            position: absolute;
+            top: 40px;
+            left: 100px;
+            z-index: 55;
+            display: flex;
+            align-items: center;
+            right: 100px;
+            z-index: -1;
+            img {
+                width: 100%;
+            }
+        }
+    }
+    .single-process {
+        text-align: center;
+        &.down {
+            margin-top: 60px;
+        }
+        .part-icon {
+            width: 130px;
+            height: 130px;
+            display: inline-flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            background: url('../img/single-process-hover.png') 100% 100% no-repeat;
+            background-size: contain;
+            @include transition($transition);
+            margin-bottom: 26px;
+            position: relative;
+            img {
+                width: 60px;
+            }
+            span {
+                &.step-num {
+                    position: absolute;
+                    top: -2px;
+                    left: -2px;
+                    width: 22px;
+                    height: 22px;
+                    background: #515251;
+                    border-radius: 50%;
+                    color: $white;
+                    font-size: 12px;
+                    line-height: 22px;
+                    @include transition($transition);
+                    font-weight: 700;
+                }
+            }
+        }
+        &:hover {
+            .part-icon {
+                background: url('../img/single-process-bg.png') 100% 100% no-repeat;
+                background-size: contain;
+                span {
+                    &.step-num {
+                        background: #7bcf0c;
+                    }
+                }
+            }
+        }
+        h4 {
+            font-weight: 600;
+            color: $secondary-color;
+            font-size: 20px;
+            margin-bottom: 6px;
+        }
+        p {
+            font-size: 16px;
+            line-height: 28px;
+        }
+        a {
+            color: $third-color;
+            font-family: $heading-font;
+            font-size: 15px;
+            font-weight: 700;
+        }
+    }
+}

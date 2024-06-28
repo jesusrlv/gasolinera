@@ -1,0 +1,100 @@
+/*==========================================
+    side menubar
+===========================================*/
+.side-menubar {
+    display: block;
+    border-left: 5px groove rgba(251, 79, 0, 0.7);
+    &.opened {
+        transform: translateX(0);
+    }
+    position: fixed;
+    top: 0;
+    z-index: 555;
+    background: $white;
+    right: 0;
+    height: 100%;
+    width: 300px;
+    padding: 30px;
+    @include transition($transition);
+    transform: translateX(100%);
+    .nav {
+        margin-top: 30px; 
+        .nav-item {
+            .nav-link {
+                border: 1px solid rgba(0, 0, 0, 0.1);
+                padding: 15px 15px;
+                border-top: 0;
+                font-family: $heading-font;
+                font-weight: 500;
+                color: $secondary-color;
+                position: relative;
+                z-index: 2;
+                @include transition($transition);
+                &:before {
+                    position: absolute;
+                    content: '';
+                    left: 0;
+                    top: 0;
+                    background: $base-color;
+                    width: 0;
+                    height: 100%;
+                    z-index: -1;
+                    @include transition($transition);
+                }
+                &:hover {
+                    color: $white;
+                    padding-left: 20px;
+                    &:before {
+                        width: 100%;
+                    }
+                }
+            }
+            &.dropdown {
+                &:hover {
+                    .dropdown-menu {
+                        display: block;
+                    }
+                }
+                .dropdown-menu {
+                    padding: 0;
+                    border-radius: 0;
+                    margin: 0;
+                    width: 100%;
+                    .dropdown-item {
+                        padding: 15px;
+                        background: $secondary-color;
+                        color: $white;
+                        border-bottom: 1px solid rgba(255, 255, 255, 0.2);
+                        position: relative;
+                        z-index: 2;
+                        @include transition($transition);
+                        &:before {
+                            position: absolute;
+                            content: '';
+                            left: 0;
+                            top: 0;
+                            width: 0;
+                            height: 100%;
+                            background: $base-color;
+                            z-index: -1;
+                            @include transition($transition);
+                        }
+                        &:hover {
+                            &:before {
+                                width: 100%;
+                            }
+                        }
+                        &:last-child {
+                            border-bottom: none;
+                        }
+                    }
+                }
+            }
+            &:first-child {
+                .nav-link {
+                    border-top: 1px solid rgba(0, 0, 0, 0.1);
+                }
+            }
+        }
+    }
+}

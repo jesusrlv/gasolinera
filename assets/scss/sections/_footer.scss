@@ -1,0 +1,183 @@
+/*==========================================
+    footer
+===========================================*/
+.footer {
+    background: #191514;
+    padding: 120px 0;
+    .single-widget {
+        .about-area {
+            a.logo {
+                display: inline-block;
+                margin-bottom: 30px;
+            }
+            p {
+                font-size: 14px;
+                line-height: 24px;
+                color: $white;
+                margin-bottom: 20px;
+            }
+            ul {
+                li {
+                    display: flex;
+                    padding-bottom: 12px;
+                    font-size: 14px;
+                    line-height: 24px;
+                    span {
+                        display: block;
+                        &.icon {
+                            color: $base-color;
+                            margin-right: 10px;
+                        }
+                        &.text {
+                            color: $white;
+                        }
+                    }
+                }
+            }
+        }
+        .useful-link {
+            h3 {
+                color: $white;
+                font-size: 24px;
+                font-weight: 600;
+                text-transform: uppercase;
+            }
+            ul {
+                li {
+                    line-height: 40px;
+                    a {
+                        display: inline-block;
+                        color: #888;
+                        font-size: 14px;
+                        @include transition($transition);
+                        &:hover {
+                            padding-left: 10px;
+                            color: $white;
+                            span.text {
+                                &:after {
+                                    width: 100%;
+                                }
+                            }
+                        }
+                        span {
+                            display: inline-block;
+                            &.icon {
+                                margin-right: 8px;
+                            }
+                            &.text {
+                                position: relative;
+                                &:after {
+                                    position: absolute;
+                                    content: '';
+                                    left: 0;
+                                    bottom: 0;
+                                    width: 0;
+                                    height: 1px;
+                                    background: $white;
+                                    @include transition($transition);
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+        }
+        .support-link {
+            h3 {
+                color: $white;
+                font-size: 24px;
+                font-weight: 600;
+                text-transform: uppercase;
+            }
+            ul {
+                li {
+                    line-height: 40px;
+                    a {
+                        display: inline-block;
+                        color: #888;
+                        font-size: 14px;
+                        @include transition($transition);
+                        position: relative;
+                        &:after {
+                            position: absolute;
+                            content: '';
+                            left: 0;
+                            bottom: 0;
+                            width: 0;
+                            height: 1px;
+                            background: $white;
+                            @include transition($transition);
+                        }
+                        &:hover {
+                            color: $white;
+                            &:after {
+                                width: 100%;
+                            }
+                        }
+                    }
+                }
+            }
+        }
+        .gallery-area {
+            h3 {
+                color: $white;
+                font-size: 24px;
+                font-weight: 600;
+                text-transform: uppercase;
+                margin-bottom: 21px;
+            }
+            .g-row {
+                display: flex;
+                margin: 0 -3px;
+                .single-photo {
+                    width: calc(100%/(3-20px));
+                    padding: 0 3px;
+                    margin-bottom: 6px;
+                    position: relative;
+                    img {
+                        width: 100%;
+                    }
+                    &:hover {
+                        .content-on-image {
+                            background: rgba(0, 0, 0, .8);
+                            a {
+                                position: initial;
+                                opacity: 1;
+                                visibility: visible;
+                                margin-top: 0;
+                            }
+                        }
+                    }
+                    .content-on-image {
+                        position: absolute;
+                        top: 0;
+                        left: 0;
+                        width: 100%;
+                        height: 100%;
+                        background: rgba(0, 0, 0, 0);
+                        display: flex;
+                        flex-direction: column;
+                        justify-content: center;
+                        align-items: center;
+                        @include transition($transition);
+                        a {
+                            display: inline-block;
+                            width: 25px;
+                            height: 25px;
+                            background: $white;
+                            color: $base-color;
+                            font-size: 12px;
+                            text-align: center;
+                            line-height: 25px;
+                            border-radius: 50%;
+                            position: relative;
+                            margin-top: -6px;
+                            opacity: 0;
+                            visibility: hidden;
+                        }
+                    }
+                }
+            }
+        }
+    }
+}

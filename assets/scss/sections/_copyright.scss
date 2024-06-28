@@ -1,0 +1,57 @@
+/*==========================================
+    copyright
+===========================================*/
+.copyright {
+    background: #000000;
+    padding: 23px 0px 22px;
+    .copyright-area {
+        p {
+            font-family: $heading-font;
+            font-size: 14px;
+            margin: 0;
+            color: $white;
+            a {
+                color: $base-color;
+            }
+        }
+    }
+    .social-area {
+        float: right;
+        ul {
+            li {
+                display: inline-block;
+                font-family: $heading-font;
+                color: #666666;
+                font-size: 14px;
+                &:first-child {
+                    margin-right: 10px;
+                }
+                &.social {
+                    a {
+                        display: inline-block;
+                        width: 20px;
+                        height: 20px;
+                        background: #666666;
+                        color: $secondary-color;
+                        text-align: center;
+                        font-size: 10px;
+                        border-radius: 3px;
+                        line-height: 20px;
+                        margin-right: 6px;
+                        @include transition($transition);
+                        &:hover {
+                            background: $white;
+                        }
+                    }
+                }
+                &:last-child {
+                    &.social {
+                        a {
+                            margin-right: 0;
+                        }
+                    }
+                }
+            }
+        }
+    }
+}

@@ -1,0 +1,59 @@
+/* =================================
+ css index
+ =================================
+    1. header
+    2. banner
+    3. about
+    4. about 2nd
+    5. feature
+    6. portfolio
+    7. portfolio 2nd
+    8. portfolio 3rd
+    9. testimonial
+    10. team
+    11. client
+    12. news
+    13. blog
+    14. contact
+    15. footer
+    16. braedcrumb
+    17. sidebar
+    18. brand
+*/
+
+
+@import "main/_variables";
+@import "main/_mixins";
+@import "main/_global";
+@import "main/_normalize";
+//=Section scss
+
+@import "sections/_header";
+@import "sections/_banner-slide";
+@import "sections/_feature";
+@import "sections/_about";
+@import "sections/_multi-section-1";
+@import "sections/_service";
+@import "sections/_faq";
+@import "sections/_team";
+@import "sections/_another-team";
+@import "sections/_contact";
+@import "sections/_testimonial";
+@import "sections/_blog";
+@import "sections/_brand";
+@import "sections/_footer";
+@import "sections/_copyright";
+//=Pages scss
+@import "pages/_fun-fact";
+@import "pages/_process";
+@import "pages/_product-slider";
+@import "pages/_breadcrumb";
+@import "pages/_team-2";
+@import "pages/_error-404";
+@import "pages/_service-details";
+@import "pages/_sidebar";
+@import "pages/_team-details";
+@import "pages/_contact-section";
+@import "pages/_blog-details";
+@import "pages/_side-menubar";
+  

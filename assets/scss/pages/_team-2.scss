@@ -1,0 +1,46 @@
+/*==========================================
+    team 2
+===========================================*/
+.team-2 {
+    padding: 120px 0 90px;
+    .single-member {
+        box-shadow: 0.968px 3.881px 10px 0px rgba(8, 8, 8, 0.1);
+        margin-bottom: 30px;
+        &:hover {
+            .part-text {
+                background: $base-color;
+                span {
+                    &.name, &.position {
+                        color: $white;
+                    }
+                }
+            }
+        }
+        .part-img {
+            img {
+                width: 100%;
+            }
+        }
+        .part-text {
+            text-align: center;
+            padding: 26px 0;
+            @include transition($transition);
+            span {
+                display: block;
+                @include transition($transition);
+                &.name {
+                    font-size: 20px;
+                    color: black;
+                    font-weight: 600;
+                    font-family: $heading-font;
+                    margin-bottom: 5px;
+                }
+                &.position {
+                    font-size: 16px;
+                    color: #666666;
+                    font-weight: 600;
+                }
+            }
+        }
+    }
+}

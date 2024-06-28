@@ -1,0 +1,58 @@
+/*==========================================
+    team-details
+===========================================*/
+.team-2 {
+    &.team-details {
+        padding-bottom: 120px;
+    }
+    .team-details-content {
+        p {
+            color: #444444;
+            font-size: 17px;
+            line-height: 30px;
+            margin-bottom: 27px;
+        }
+        .team-details-footer {
+            .part-left {
+                display: inline-block;
+                ul {
+                    li {
+                        display: inline-block;
+                        font-size: 18px;
+                        color: #1a1e66;
+                        margin-right: 30px;
+                        span {
+                            display: inline-block;
+                            &.icon {
+                                margin-right: 10px;
+                                color: $base-color;
+                            }
+                        }
+                    }
+                }
+            }
+            .part-right {
+                float: right;
+                ul {
+                    li {
+                        display: inline-block;
+                        a {
+                            display: inline-block;
+                            color: $base-color;
+                            @include transition($transition);
+                            margin-right: 15px;
+                            &:hover {
+                                color: $secondary-color;
+                            }
+                        }
+                        &:last-child {
+                            a {
+                                margin-right: 0;
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    }
+}

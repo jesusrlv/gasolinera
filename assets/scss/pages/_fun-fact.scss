@@ -1,0 +1,139 @@
+/*==========================================
+    fun fact
+===========================================*/
+.fun-fact {
+    .part-accordion {
+        padding-top: 120px;
+        .section-title {
+            h2 {
+                padding-bottom: 0;
+                &:after {
+                    display: none;
+                }
+            }
+        }
+        #accordion {
+            .card {
+                border-radius: 0;
+                border: none;
+                border-top: 1px solid #e3e3ee;
+                .card-header {
+                    padding: 0;
+                    border: none;
+                    background: transparent;
+                    h5 {
+                        button {
+                            padding: 0;
+                            font-family: $heading-font;
+                            font-weight: 700;
+                            font-size: 18px;
+                            color: $secondary-color;
+                            text-decoration: none;
+                            padding: 22px 0; 
+                            width: 100%;
+                            text-align: left;
+                            padding-left: 10px;
+                            span {
+                                display: inline-block;
+                                &.first-icon, &.second-icon {
+                                    transform: rotate(0deg);
+                                    @include transition($transition);
+                                }
+                                &.first-icon {
+                                    margin-right: 16px;
+                                    color: $base-color;
+                                }
+                                &.second-icon {
+                                    margin-left: 6px;
+                                    color: #c9c9ce;
+                                    float: right;
+                                }
+                            }
+                            &.collapsed {
+                                span {
+                                    display: inline-block;
+                                    &.first-icon, &.second-icon {
+                                        transform: rotate(-90deg);
+                                    }
+                                }
+                            }
+                        }
+                    }
+                }
+                .card-body {
+                    padding: 0;
+                    font-size: 16px;
+                    line-height: 30px;
+                    color: #444444;
+                    margin-bottom: 30px;
+                }
+            }
+        }
+    }
+    .part-statics {
+        .statics-img {
+            position: relative;
+            z-index: 20;
+            box-shadow: 0px 14px 27px 0px rgba(0, 0, 0, 0.24);
+            img {
+                width: 100%;
+            }
+        }
+        .static-area {
+            position: relative;
+            z-index: 2;
+            padding: 120px 0;
+            &:after {
+                position: absolute;
+                background: url('../img/static-bg.jpg') center center no-repeat;
+                background-size: cover;
+                content: '';
+                left: -130px;
+                top: 0;
+                right: 0;
+                height: 100%;
+                z-index: -2;
+            }
+            &:before {
+                position: absolute;
+                content: '';
+                left: -130px;
+                top: 0;
+                right: 0;
+                height: 100%;
+                background-color: black;
+                z-index: -1;
+                opacity: .85;
+            }
+            .single-static {
+                padding-left: 20px;
+                margin-bottom: 54px;
+                &:last-child {
+                    margin-bottom: 0;
+                }
+                span {
+                    display: block;
+                    &.number {
+                        font-family: $heading-font;
+                        font-weight: 700;
+                        color: $white;
+                        font-size: 55px;
+                        margin: -5px 0 -8px;
+                        display: inline-block;
+                        span {
+                            &.counter {
+                                display: inline-block;
+                            }
+                        }
+                    }
+                    &.title {
+                        font-size: 18px;
+                        color: $base-color;
+                        font-weight: 600;
+                        line-height: 26px;
+                    }
+                }
+            }
+        }
+    }
+}

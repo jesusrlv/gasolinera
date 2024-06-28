@@ -664,7 +664,7 @@ ul {
   position: relative;
   border-radius: 0 0 0 360px; }
   .animation-slide.slide-style-2 .single-slide:after {
-    background: url("../img/banner-1.jpg") center center no-repeat;
+    background: url("../../img/gasolinera_06.jpg") center center no-repeat;
     background-size: cover;
     opacity: 1;
     border-radius: 0 0 0 360px; }
@@ -679,13 +679,13 @@ ul {
     opacity: .76;
     border-radius: 0 0 0 360px; }
   .animation-slide.slide-style-2 .single-slide.bg-2:after {
-    background: url("../img/banner-3.jpg") center center no-repeat;
+    background: url("../../img/gasolinera_05.jpg") center center no-repeat;
     background-size: cover; }
   .animation-slide.slide-style-2 .single-slide.bg-3:after {
-    background: url("../img/banner-4.jpg") center center no-repeat;
+    background: url("../../img/gasolinera_04.jpg") center center no-repeat;
     background-size: cover; }
   .animation-slide.slide-style-2 .single-slide.bg-1:after {
-    background: url("../img/banner-2.jpg") center center no-repeat;
+    background: url("../../img/gasolinera_03.jpg") center center no-repeat;
     background-size: cover; }
   .animation-slide.slide-style-2 .single-slide .part-img {
     position: absolute;

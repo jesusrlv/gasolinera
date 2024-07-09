@@ -8,6 +8,7 @@
 	$email_message .=" en fecha ".date("d/m/Y")." at ".date("H:i")."\n\n";
 	$email_message .= stripslashes($_POST['message']);
 
+    $email_subject = "Nuevo mensaje de ".$email_from;
 	$headers = 'De: '.$email_from."\r\n" .
    'Reply-To: '.$email_from."\r\n" ;
 

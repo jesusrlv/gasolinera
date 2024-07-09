@@ -1,17 +1,20 @@
 <?php
-	if(!isset( $_POST['name']) || !isset($_POST['email']) || !isset($_POST['message']) ) {
-		echo 'error, intenta nuevamente';
-		die();
-	}
-	$email_from = $_POST['email'];
-	$email_message = "Revisar correo de ".stripslashes($_POST['name'])."\n\n";
-	$email_message .=" en fecha ".date("d/m/Y")." at ".date("H:i")."\n\n";
-	$email_message .= stripslashes($_POST['message']);
+if ($_SERVER['REQUEST_METHOD'] == 'POST') {
+    $name = htmlspecialchars($_POST['name']);
+    $email = htmlspecialchars($_POST['email']);
+    $message = htmlspecialchars($_POST['message']);
 
-	$headers = 'De: '.$email_from."\r\n" .
-   'Reply-To: '.$email_from."\r\n" ;
+    $to = 'jesusrlvrojo@gmail.com'; // Reemplaza con tu dirección de correo
+    $subject = 'New Contact Form Submission';
+    $body = "Name: $name\nEmail: $email\n\nMessage:\n$message";
+    $headers = "From: $email";
 
-	mail('jesusrlvrojo@gmail.com', $email_subject, $email_message, $headers);
-	echo "Gracias por contactarnos.";
-	die();
+    if (mail($to, $subject, $body, $headers)) {
+        echo 'Your message has been sent successfully!';
+    } else {
+        echo 'Failed to send message. Please try again.';
+    }
+} else {
+    echo 'Invalid request.';
+}
 ?>

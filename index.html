@@ -27,9 +27,10 @@
     <!-- responsive -->
     <link rel="stylesheet" href="assets/css/responsive.css">
 
-    <script src="js/contact.js"></script>
-
+    <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+    
     <script src="https://code.jquery.com/jquery-3.7.1.js" integrity="sha256-eKhayi8LEQwp4NKxN+CfCh+3qOVUtJn3QNZ0TciWLP4=" crossorigin="anonymous"></script>
+    <script src="mail.js"></script>
 </head>
     <body>
 
@@ -392,7 +393,7 @@
                                 </div>
                             </div>
                             <textarea placeholder="Tu mensaje" id="message" required></textarea>
-                            <button type="submit">Enviar<span><i class="fas fa-share"></i></span></button>
+                            <button type="button" onclick="email2()">Enviar<span><i class="fas fa-share"></i></span></button>
                         </form>
                     </div>
                 </div>
@@ -513,7 +514,7 @@
         <!-- jquery -->
         <!-- <script src="assets/js/jquery.js"></script>
         <script src="assets/js/jquery-1.11.3.min.js"></script> -->
-        <script src="https://code.jquery.com/jquery-migrate-1.4.1.min.js"></script>
+        <!-- <script src="https://code.jquery.com/jquery-migrate-1.4.1.min.js"></script> -->
         <!-- bootstrap -->
         <script src="assets/js/bootstrap.min.js"></script>
         <!-- owl carousel -->
@@ -536,32 +537,3 @@
     </body>
 
 </html>
-
-<script>
-    $(document).ready(function() {
-    $('#contact-form2').on('submit', function(event) {
-        event.preventDefault();
-
-        var name = $('#name').val();
-        var email = $('#email').val();
-        var message = $('#message').val();
-
-        $.ajax({
-            type: 'POST',
-            url: 'contact.php',
-            data: {
-                name: name,
-                email: email,
-                message: message
-            },
-            success: function(response) {
-                $('#response-message').html(response);
-                $('#contact-form2')[0].reset();
-            },
-            error: function() {
-                $('#response-message').html('Failed to send message. Please try again.');
-            }
-        });
-    });
-});
-</script>

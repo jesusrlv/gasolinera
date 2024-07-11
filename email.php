@@ -55,7 +55,7 @@ require 'email/SMTP.php';
 
     } catch (Exception $e) {
         echo "Error al enviar mensaje. Mailer Error: {$mail->ErrorInfo}";
-        echo $email;
+        // echo $email;
         
     }
 
